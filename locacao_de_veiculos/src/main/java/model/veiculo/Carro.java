@@ -25,7 +25,7 @@ public class Carro extends Veiculo {
         this.placa = placa;
         this.chassi = chassi;
         this.anoDeFabricacao = anoDeFabricacao;
-        this.alugado = false;
+        this.alugado = "Não";
         this.valorAluguel = valorAluguel;
         this.qtd_portas = qtd_portas;
         this.qtd_assentos = qtd_assentos;
@@ -33,7 +33,7 @@ public class Carro extends Veiculo {
     
     //MÉTODO QUE RETORNA A DESCRIÇÃO DO VEICULO
     public String descricaoVeiculo() {
-        if(alugado){
+        if(alugado.equals("Sim")){
             return "CARRO: {Nome: " + nome + ", Fabricante: " + fabricante + ", Modelo:" + modelo + ", Cor: " + cor + ", Placa: " + placa + ", Chassi: " + chassi + ", Ano de Fabricação: " + anoDeFabricacao + ", Quantidade de Portas: " + qtd_portas + "Quantidade de Assentos: " + qtd_assentos + ", Alugado: Sim, valor do Aluguel: " + valorAluguel + '}';
         }else{
             return "CARRO: {Nome: " + nome + ", Fabricante: " + fabricante + ", Modelo:" + modelo + ", Cor: " + cor + ", Placa: " + placa + ", Chassi: " + chassi + ", Ano de Fabricação: " + anoDeFabricacao + ", Quantidade de Portas: " + qtd_portas + "Quantidade de Assentos: " + qtd_assentos + ", Alugado: Não}";

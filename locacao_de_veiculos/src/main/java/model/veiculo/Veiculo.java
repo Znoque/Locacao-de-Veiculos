@@ -9,6 +9,7 @@ package model.veiculo;
  * @author Znoque
  */
 public abstract class Veiculo {
+
     protected String nome;            //VARIAVEL NOME DO TIPO TEXTO
     protected String fabricante;      //VARIAVEL FABRICANTE DO TIPO TEXTO
     protected String modelo;          //VARIAVEL MODELO DO TIPO TEXTO
@@ -16,9 +17,9 @@ public abstract class Veiculo {
     protected String placa;           //VARIAVEL PLACA DO TIPO TEXTO
     protected String chassi;          //VARIAVEL CHASSI DO TIPO TEXTO
     protected int anoDeFabricacao;    //VARIAVEL ANO DE FABRICACAO DO TIPO INTEIRO
-    protected boolean alugado;        //VARIAVEL ALUGADO DO TIPO BOLEANO(VERDADEIRO OU FALSO)
+    protected String alugado;        //VARIAVEL ALUGADO DO TIPO BOLEANO(VERDADEIRO OU FALSO)
     protected double valorAluguel;    //VARIAVEL VALOR ALUGADO DO TIPO REAL           
-    
+
     //MÉTODO QUE RETORNA O NOME DO VEICULO
     public String getNome() {
         return nome;
@@ -38,11 +39,12 @@ public abstract class Veiculo {
     public void setFabricante(String fabricante) {
         this.fabricante = fabricante;
     }
-    
+
     //MÉTODO QUE RETORNA O MODELO VEICULO
     public String getModelo() {
         return modelo;
     }
+
     //MÉTODO QUE DEFINE/ALTERA O MODELO DO VEICULO
     public void setModelo(String modelo) {
         this.modelo = modelo;
@@ -52,6 +54,7 @@ public abstract class Veiculo {
     public String getCor() {
         return cor;
     }
+
     //MÉTODO QUE DEFINE/ALTERA A COR DO VEICULO
     public void setCor(String cor) {
         this.cor = cor;
@@ -87,16 +90,6 @@ public abstract class Veiculo {
         this.anoDeFabricacao = anoDeFabricacao;
     }
 
-    //MÉTODO QUE RETORNA A SITUAÇÃO(ALUGADO) DO VEICULO
-    public boolean isAlugado() {
-        return alugado;
-    }
-    
-    //MÉTODO QUE DEFINE/ALTERA A SITUAÇÃO(ALUGADO) DO VEICULO
-    public void setAlugado(boolean alugado) {
-        this.alugado = alugado;
-    }
-
     //MÉTODO QUE RETORNA VALOR DO ALUGUEL DO VEICULO
     public double getValorAluguel() {
         return valorAluguel;
@@ -106,4 +99,15 @@ public abstract class Veiculo {
     public void setValorAluguel(double valorAluguel) {
         this.valorAluguel = valorAluguel;
     }
+
+    public String getAlugado() {
+        return alugado;
+    }
+
+    public void setAlugado(String alugado) {
+        this.alugado = alugado;
+    }
+    
+    
 }
+

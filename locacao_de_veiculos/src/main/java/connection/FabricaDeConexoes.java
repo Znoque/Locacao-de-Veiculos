@@ -25,7 +25,7 @@ public class FabricaDeConexoes {
         }        
     }
     
-    public void desconectar(Connection con){//MÉTODO PARA FECHAR A CONEXÃO COM O BANCO DE DADOS
+    public static void desconectar(Connection con){//MÉTODO PARA FECHAR A CONEXÃO COM O BANCO DE DADOS
         if(con != null){
             try {
                 con.close();//FECHA A CONEXÃO
@@ -35,7 +35,7 @@ public class FabricaDeConexoes {
         }        
     }
     
-    public void desconectar(Connection con, PreparedStatement stmt){//MÉTODO PARA FECHAR A CONEXÃO COM O BANCO DE DADOS   
+    public static void desconectar(Connection con, PreparedStatement stmt){//MÉTODO PARA FECHAR A CONEXÃO COM O BANCO DE DADOS   
         if(stmt != null){
             try {
                 stmt.close();//FECHA A CONEXÃO
@@ -46,7 +46,7 @@ public class FabricaDeConexoes {
         desconectar(con);        
     }
     
-    public void desconectar(Connection con, PreparedStatement stmt, ResultSet rs){//MÉTODO PARA FECHAR A CONEXÃO COM O BANCO DE DADOS   
+    public static void desconectar(Connection con, PreparedStatement stmt, ResultSet rs){//MÉTODO PARA FECHAR A CONEXÃO COM O BANCO DE DADOS   
         if(rs != null){
             try {
                 rs.close();//FECHA A CONEXÃO

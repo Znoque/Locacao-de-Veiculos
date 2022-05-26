@@ -24,14 +24,14 @@ public class Moto extends Veiculo{
         this.placa = placa;
         this.chassi = chassi;
         this.anoDeFabricacao = anoDeFabricacao;
-        this.alugado = false;
+        this.alugado = "Não";
         this.valorAluguel = valorAluguel;
         this.cilindrada = cilindrada;
     }
     
     //MÉTODO QUE RETORNA A DESCRIÇÃO DO VEICULO
     public String descricaoVeiculo() {
-        if(alugado){
+        if(alugado.equals("Sim")){
             return "MOTO: {Nome: " + nome + ", Fabricante: " + fabricante + ", Modelo:" + modelo + ", Cor: " + cor + ", Placa: " + placa + ", Chassi: " + chassi + ", Ano de Fabricação: " + anoDeFabricacao + ", Cilindrada: " + cilindrada + ", Alugado: Sim, valor do Aluguel: " + valorAluguel + '}';
         }else{
             return "MOTO: {Nome: " + nome + ", Fabricante: " + fabricante + ", Modelo:" + modelo + ", Cor: " + cor + ", Placa: " + placa + ", Chassi: " + chassi + ", Ano de Fabricação: " + anoDeFabricacao + ", Cilindrada: " + cilindrada + ", Alugado: Não}";
